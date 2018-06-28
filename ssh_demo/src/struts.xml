@@ -1,0 +1,23 @@
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+	<constant name="struts.objectFactory" value="spring" />
+	
+    <package name="*" namespace="/" extends="struts-default">
+	 <action name="Index" class="action.IndexAction" method="execute">
+            <result name="success">/Index.html</result>
+        </action>
+    </package>
+        <package name="upload" namespace="/upload" extends="struts-default">
+        <action name="upload*" class="action.FileUploadAction" method="{1}">
+
+        </action>
+    </package>
+   
+</struts>

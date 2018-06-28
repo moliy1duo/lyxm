@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>Dashboard - Ace Admin</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/select2.min.css" />
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-multiselect.min.css" />
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="no-skin">
+		<div id="navbar" class="navbar navbar-default ace-save-state" style="background-image:url('./assets/images/t_ar.gif')">
+			<div class="navbar-container ace-save-state" id="navbar-container">
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				
+
+			
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<div class="main-container ace-save-state" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.loadState('main-container')}catch(e){}
+			</script>
+
+			<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+				<script type="text/javascript">
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
+
+				
+
+<ul class="nav nav-list">
+	<li class="">
+		<a href="index.html">
+			<i class="menu-icon fa fa-tachometer"></i>
+			<span class="menu-text"> 上传 </span>
+		</a>
+
+		<b class="arrow"></b>
+	</li>
+
+
+		<b class="arrow"></b>
+	</li>
+	
+
+	
+	
+</ul><!-- /.nav-list -->
+
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+			</div>
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">北京联通楼宇管理系统</a>
+							</li>
+
+							
+							<li class="active">数据智能维护</li>
+						</ul><!-- /.breadcrumb -->
+
+						
+					</div>
+
+					<div class="page-content">
+						
+
+						<div  style="color:#000000">
+							<h5>
+								数据上传
+								
+							</h5>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								
+
+								
+
+								<div class="widget-box">
+									<div class="widget-header widget-header-blue widget-header-flat" style="color:#000000">
+										<h6 class="widget-title lighter"></h6>
+
+										
+									</div>
+
+									<div class="widget-body">
+										<div class="widget-main">
+											<div id="fuelux-wizard-container">
+												<div>
+													<ul class="steps">
+														<li data-step="1" class="active">
+															<span class="step">1</span>
+															<span class="title">选择修改类别</span>
+														</li>
+
+														<li data-step="2">
+															<span class="step">2</span>
+															<span class="title">上传文件</span>
+														</li>
+
+														<li data-step="3">
+															<span class="step">3</span>
+															<span class="title">提交修改</span>
+														</li>
+												
+													</ul>
+												</div>
+
+												<hr />
+
+												 <div class="step-content pos-rel">  
+													<div class="step-pane active" data-step="1" >
+													<div style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+													<p style="margin:0px;margin-right:10px;"> 选择修改类别 </p>
+					
+													<div class="">
+														<select multiple="" id="state" name="state" class="select2" data-placeholder="点击选择年份">
+															<option value="AL">楼宇类别1</option>
+															<option value="AK">楼宇类别2</option>
+															<option value="AZ">住宅用户数</option>
+															<option value="AR">商务客户数</option>				
+														<!-- 	<option value="CA">California</option>
+															<option value="CO">Colorado</option>
+															<option value="CT">Connecticut</option>
+															<option value="DE">Delaware</option>
+															<option value="FL">Florida</option>
+															<option value="GA">Georgia</option>
+															<option value="HI">Hawaii</option>
+															<option value="ID">Idaho</option>
+															<option value="IL">Illinois</option>
+															<option value="IN">Indiana</option>
+															<option value="IA">Iowa</option>
+															<option value="KS">Kansas</option>
+															<option value="KY">Kentucky</option>
+															<option value="LA">Louisiana</option>
+															<option value="ME">Maine</option>
+															<option value="MD">Maryland</option>
+															<option value="MA">Massachusetts</option>
+															<option value="MI">Michigan</option>
+															<option value="MN">Minnesota</option>
+															<option value="MS">Mississippi</option>
+															<option value="MO">Missouri</option>
+															<option value="MT">Montana</option>
+															<option value="NE">Nebraska</option>
+															<option value="NV">Nevada</option>
+															<option value="NH">New Hampshire</option>
+															<option value="NJ">New Jersey</option>
+															<option value="NM">New Mexico</option>
+															<option value="NY">New York</option>
+															<option value="NC">North Carolina</option>
+															<option value="ND">North Dakota</option>
+															<option value="OH">Ohio</option>
+															<option value="OK">Oklahoma</option>
+															<option value="OR">Oregon</option>
+															<option value="PA">Pennsylvania</option>
+															<option value="RI">Rhode Island</option>
+															<option value="SC">South Carolina</option>
+															<option value="SD">South Dakota</option>
+															<option value="TN">Tennessee</option>
+															<option value="TX">Texas</option>
+															<option value="UT">Utah</option>
+															<option value="VT">Vermont</option>
+															<option value="VA">Virginia</option>
+															<option value="WA">Washington</option>
+															<option value="WV">West Virginia</option>
+															<option value="WI">Wisconsin</option>
+															<option value="WY">Wyoming</option> -->
+														</select>
+			
+														
+													</div>
+									</div>
+									</div>
+												
+
+													 <div class="step-pane" data-step="2"> 
+														<div style="width:100%;height:100%;display: flex;
+														flex-direction: column;
+														justify-content: center;
+														align-items: stretch;">
+														<div style="display:flex;flex-direction: row;justify-content: center;align-items:center">
+																<p>请上传包含修改信息的文件(xsl格式)</p>
+														</div>
+														<div style="display:flex;flex-direction: row;justify-content: center;align-items:center">
+															<form  id="uploadfp" style="width: 100%;
+															margin-left: 35%;" action="/bysjdemo/upload/uploaduploadfp" enctype="multipart/form-data" method="post"  onsubmit="savelrb();">
+						
+																
+														
+																<div class="col-xs-12 col-sm-5">
+																	<span class="input-icon block"> 
+																	
+																		<input id="realfp" type="file" name="upload" class="width-100" style="height: 43px;
+																		background-color: #c0f6ff;
+																		line-height: 45px;
+																		font-size: large;
+																		text-align: center;
+																		opacity: 0;" />
+																		<span class="input-icon" style="position: relative;top:-43px;height:43px;width:100%;">
+																			<input id="fakefp" type="text" name="text" class="width-100" style="height: 43px;
+																			
+																			background-color: #c0f6ff;
+																			line-height: 45px;
+																			font-size: large;
+																			text-align: center;
+																			top: -43px;
+																			opacity: 1;" onclick="clicklrb"/>
+																			<i class="ace-icon fa fa-cloud-upload blue" style="font-size:25px;line-height: 44px; left:10px;"></i>
+																		</span>
+																		
+																		<!-- <i class="ace-icon fa fa-times-circle red"></i> -->
+																	</span>
+																</div>
+																<div><input id="fpSubmitButton" type="submit" class="btn btn-success" value="提交" ></div>
+																</form>
+																</div>
+																<div style="display:flex;flex-direction: row;justify-content: center;align-items:center">
+																		<p id="fpCount">已上传0张</p>
+																</div>
+															</div>
+													 </div>
+													
+													 <div class="step-pane" data-step="3"> 
+														<div style="width:100%;height:100%;display: flex;
+														flex-direction: column;
+														justify-content: center;
+														align-items: stretch;">
+														<!-- <div id="wanzhengbuyizhi" class="alert alert-danger" style="display:none;">
+															<button type="button" class="close" data-dismiss="alert">
+																<i class="ace-icon fa fa-times"></i>
+															</button>
+				
+															<strong>
+																<i class="ace-icon fa fa-times"></i>
+																未通过入账完整性检测
+															</strong>
+				
+																销售发票总额与因营业收入不一致
+															<br>
+														</div>
+														<div id="wanzhengyizhi" class="alert alert-block alert-success" style="display:none;">
+															<button type="button" class="close" data-dismiss="alert">
+																<i class="ace-icon fa fa-times"></i>
+															</button>
+				
+															<p>
+																<strong>
+																	<i class="ace-icon fa fa-check"></i>
+																	已通过入账完整性检测
+																</strong>
+																销售发票总额与因营业收入一致
+															</p>
+				
+															
+														</div> -->
+															</div>
+													 </div>
+												</div>
+											</div>
+
+											<hr />
+											<div class="wizard-actions">
+												<button class="btn btn-prev">
+													<i class="ace-icon fa fa-arrow-left"></i>
+													返回
+												</button>
+
+												<button class="btn btn-success btn-next" data-last="修改">
+													下一步
+													<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+												</button>
+											</div>
+										</div><!-- /.widget-main -->
+									</div><!-- /.widget-body -->
+								</div>
+
+							
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+			<div class="footer">
+				
+			</div>
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+			<!--[if !IE]> -->
+			<script src="assets/js/jquery-2.1.4.min.js"></script>
+			<script src="assets/js/jquery.form.js"></script>
+			<!-- <![endif]-->
+	
+			<!--[if IE]>
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<![endif]-->
+			<script type="text/javascript">
+				if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			</script>
+			<script src="assets/js/bootstrap.min.js"></script>
+	
+			<!-- page specific plugin scripts -->
+			<script src="assets/js/wizard.min.js"></script>
+			<script src="assets/js/jquery.validate.min.js"></script>
+			<script src="assets/js/jquery-additional-methods.min.js"></script>
+			<script src="assets/js/bootbox.js"></script>
+			<script src="assets/js/jquery.maskedinput.min.js"></script>
+			<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/bootstrap-multiselect.min.js"></script>
+		
+			<!-- ace scripts -->
+			<script src="assets/js/ace-elements.min.js"></script>
+			<script src="assets/js/ace.min.js"></script>
+			<script src="assets/js/echarts.common.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			var fpSubmitCount = 0;
+			var lrbDataArray = [];
+			var currentYear;
+			jQuery(function($) {
+							$.ajax(
+							{ url: "/bysjdemo/fenxi/fenxigetAllLrb",
+								dataType:"json",
+							 	success: function(res){
+								alert(res);
+								var data = res.data;
+								lrbDataArray = data;
+								var AxisArray = [];
+								var series = [];
+								var innerHtml = '';
+								for(var i = 0;i<data.length;i++){
+									var valueItem = "<option value='"+data[i].lirunbiaonianfen+"'>"+data[i].lirunbiaonianfen+"</option>";
+									innerHtml += valueItem;
+								}
+								$('#state').html(innerHtml);
+								$('.select2').css('width','200px').select2({allowClear:true})
+								$('#select2-multiple-style .btn').on('click', function(e){
+									var target = $(this).find('input[type=radio]');
+									var which = parseInt(target.val());
+									currentYear = target.val();
+									
+								});
+								
+							}});
+							$('#fakefp').on('click',function(){
+								$('#realfp').click();
+							});
+							$('#realfp').on('change',function(){
+							$	('#fakefp').val($('#realfp').val());
+							});
+							$('#uploadfp').on('submit',function(){
+								alert('发货单');
+								$("#uploadfp").ajaxSubmit(function(message) {   
+							// 对于表单提交成功后处理，message为返回内容   
+								});   
+
+
+								return false;
+							});
+							$("#fpSubmitButton").on('click',function(){
+								fpSubmitCount ++;
+								alert(fpSubmitCount);
+								$("#fpCount").html("已上传"+fpSubmitCount+"张");
+							});	
+				
+
+
+
+
+
+
+
+				var $validation = false;
+				$('#fuelux-wizard-container')
+				.ace_wizard({
+					//step: 2 //optional argument. wizard will jump to step "2" at first
+					//buttons: '.wizard-actions:eq(0)'
+				})
+				.on('actionclicked.fu.wizard' , function(e, info){
+					if(info.step == 1 ) {
+						alert('1');
+						
+					}
+					if(info.step == 2 ) {
+						alert('开始分析');
+						$.ajax(
+							{ url: "/bysjdemo/fenxi/fenxigetAllFp",
+								dataType:"json",
+							 	success: function(res){
+								alert(res);
+								var data = res.data;
+								var sum = 0;
+								var innerHtml = '';
+								for(var i = 0;i<data.length;i++){
+									sum += data.total;
+								}
+								for(var i = 0;i<lrbDataArray.length;i++){
+									if(lrbDataArray[i].lirunbiaonianfen==$('.select2').val()[0]){
+										alert("年份");
+										if(sum==lrbDataArray[i].yingyeshouru_now){
+											$('#wanzhengyizhi').show();
+										}else{
+											
+											$('#wanzhengbuyizhi').show();
+										}
+									}
+								}
+								
+							}});
+
+					}
+				})
+				//.on('changed.fu.wizard', function() {
+				//})
+				.on('finished.fu.wizard', function(e) {
+					bootbox.dialog({
+						message: "Thank you! Your information was successfully saved!", 
+						buttons: {
+							"success" : {
+								"label" : "OK",
+								"className" : "btn-sm btn-primary"
+							}
+						}
+					});
+				}).on('stepclick.fu.wizard', function(e){
+					//e.preventDefault();//this will prevent clicking and selecting steps
+				});
+			
+			
+			})
+			
+		</script>
+	</body>
+</html>
